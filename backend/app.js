@@ -12,7 +12,7 @@ import { fileURLToPath } from 'url'
 
 const _filename=fileURLToPath(import.meta.url)
 const _dirname=path.dirname(_filename)
-if(process.env.NODE_ENV!== 'PRODUCTION')
+if(process.env.NODE_ENV !== 'production')
 {
 dotenv.config({path:'./config/config.env'})
 }
@@ -26,17 +26,24 @@ app.use('/api/v1',productRouter)
 app.use('/api/v1',userRouter)
 app.use('/api/v1',orderRouter)
 app.use('/api/v1',paymentRouter)
-//serve static file
-app.use(express.static(path.join(_dirname,'../frontend/dist')))
+
 // app.get("*",(_,res)=>{
 //     res.sendFile(path.resolve(_dirname,'../frontend/dist/index.html'))
 // })
 // app.get("/*", (_, res) => {
 //   res.sendFile(path.resolve(_dirname,'../frontend/dist/index.html'))
 // })
-app.get(/.*/, (_, res) => {
-  res.sendFile(path.resolve(_dirname,'../frontend/dist/index.html'))
-})
+
+// ===== Serve React Frontend (CRA) =====
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(_dirname, "../frontend/build")));
+
+  app.get("*", (req, res) => {
+    res.sendFile(
+      path.resolve(_dirname, "../frontend", "build", "index.html")
+    );
+  });
+}
 
 
 app.use(errorHandleMiddleware)
