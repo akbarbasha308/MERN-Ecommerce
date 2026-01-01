@@ -6,7 +6,7 @@ import Razorpay from 'razorpay';
 
 if(process.env.NODE_ENV!== 'production')
 {
-dotenv.config({path:'backend/config/config.env'})
+dotenv.config({path:'./config/config.env'})
 }
 const port = process.env.PORT ||5000 ;
 
@@ -37,7 +37,7 @@ cloudinary.config({
     api_secret:process.env.API_SECRET
 })
 
-const server=app.listen(port,()=>console.log(`server is runing on the PORT ${port} }`))
+const server=app.listen(port,()=>console.log(`server is runing on the PORT ${port}`))
 // handling unhandled rejection error
 process.on("unhandledRejection",(err)=>
 {
