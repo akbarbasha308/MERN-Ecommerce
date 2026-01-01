@@ -10,9 +10,9 @@ import dotenv from 'dotenv'
 import path from 'path'
 import { fileURLToPath } from 'url'
 
-const _filename=fileURLToPath(import.meta.url)
-const _dirname=path.dirname(_filename)
-if(process.env.NODE_ENV !== 'production')
+const __filename=fileURLToPath(import.meta.url)
+const __dirname=path.dirname(__filename)
+if(process.env.NODE_ENV !== 'PRODUCTION')
 {
 dotenv.config({path:'./config/config.env'})
 }
@@ -22,28 +22,18 @@ app.use(express.json())
 app.use(fileUpload())
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser())
+
 app.use('/api/v1',productRouter)
 app.use('/api/v1',userRouter)
 app.use('/api/v1',orderRouter)
 app.use('/api/v1',paymentRouter)
+//serve static file
+app.use(express.static(path.join(__dirname,'../frontend/dist')))
+app.get("*",(_,res)=>{
+    res.sendFile(path.resolve(__dirname,'../frontend/dist/index.html'))
+})
 
-// app.get("*",(_,res)=>{
-//     res.sendFile(path.resolve(_dirname,'../frontend/dist/index.html'))
-// })
-// app.get("/*", (_, res) => {
-//   res.sendFile(path.resolve(_dirname,'../frontend/dist/index.html'))
-// })
 
-// ===== Serve React Frontend (CRA) =====
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(_dirname, "../frontend/build")));
-
-  app.get("*", (req, res) => {
-    res.sendFile(
-      path.resolve(_dirname, "../frontend", "build", "index.html")
-    );
-  });
-}
 
 
 app.use(errorHandleMiddleware)
