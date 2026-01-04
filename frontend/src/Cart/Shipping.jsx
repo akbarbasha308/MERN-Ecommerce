@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 import '../CartStyles/shipping.css'
 import PageTitle from '../components/PageTitle'
-import Navbar from '../components/navbar'
+import Navbar from '../components/Navbar.jsx'
 import Footer from '../components/Footer'
 import CheckOutPath from './checkOutPath'
 import { useDispatch,useSelector } from 'react-redux'

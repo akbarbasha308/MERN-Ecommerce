@@ -1,7 +1,7 @@
 import React from 'react'
 import '../CartStyles/OrderConfirm.css'
 import PageTitle from '../components/PageTitle'
-import Navbar from '../components/navbar'
+import Navbar from '../components/Navbar.jsx'
 import Footer from '../components/Footer'
 import { useSelector } from 'react-redux'
 import CheckOutPath from './checkOutPath'

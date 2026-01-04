@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import'../OrderStyles/MyOrders.css'
-import Navbar from '../components/navbar'
+import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import PageTitle from '../components/PageTitle'
 import {Link} from 'react-router-dom'

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import '../pageStyles/Home.css'
 import Footer from '../components/Footer.jsx'
-import Navbar from '../components/navbar.jsx'
+import Navbar from '../components/Navbar.jsx'
 import ImageSlider from '../components/ImageSlider.jsx'
 import Product from '../components/Product.jsx'
 import { useSelector } from 'react-redux'

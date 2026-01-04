@@ -1,7 +1,7 @@
 import React from "react";
 import'../CartStyles/payment.css'
 import PageTitle from "../components/PageTitle";
-import Navbar from "../components/navbar"; 
+import Navbar from "../components/Navbar.jsx"; 
 import Footer from "../components/Footer";
 import CheckOutPath from "./checkOutPath";
 import {Link,useNavigate} from 'react-router-dom'

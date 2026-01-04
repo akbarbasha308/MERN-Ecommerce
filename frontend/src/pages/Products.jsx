@@ -8,7 +8,7 @@ import { getProduct, removeErrors } from '../features/products/productSlice.js'
 import NoProducts from '../components/noProducts.jsx'
 import { toast } from 'react-toastify';
 import Product from '../components/Product.jsx'
-import Navbar from '../components/navbar.jsx'
+import Navbar from '../components/Navbar.jsx'
 import Pagination from '../components/Pagination.jsx'
 
 

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import '../OrderStyles/OrderDetails.css'
 import PageTitle from '../components/PageTitle'
-import Navbar from '../components/navbar'
+import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import { useParams } from 'react-router-dom'
 import { useDispatch } from 'react-redux'

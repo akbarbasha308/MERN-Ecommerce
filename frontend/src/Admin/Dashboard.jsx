@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import '../AdminStyles/Dashboard.css'
 import { AddBox,AttachMoney,CheckCircle,Dashboard as DashboardIcon,Error,Instagram,
     Inventory,LinkedIn,People,ShoppingCart,Star,YouTube } from '@mui/icons-material'
-import Navbar from '../components/navbar'    
+import Navbar from '../components/Navbar.jsx'    
 import PageTitle from '../components/PageTitle'
 import { Link } from 'react-router-dom'
 import { useDispatch,useSelector } from 'react-redux'
