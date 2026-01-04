@@ -1,5 +1,5 @@
 import React from 'react'
-import '../CartStyles/CheckOutPath.css'
+import '../CartStyles/CheckoutPath.css'
 import { AccountBalance,LibraryAddCheck,LocalShipping } from '@mui/icons-material'
 function CheckOutPath({activePath}) {
 
