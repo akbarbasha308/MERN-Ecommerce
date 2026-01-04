@@ -27,11 +27,15 @@ app.use('/api/v1',productRouter)
 app.use('/api/v1',userRouter)
 app.use('/api/v1',orderRouter)
 app.use('/api/v1',paymentRouter)
-//serve static file
-app.use(express.static(path.join(__dirname,'../frontend/dist')))
-app.get("*",(_,res)=>{
-    res.sendFile(path.resolve(__dirname,'../frontend/dist/index.html'))
-})
+
+// serve static frontend
+app.use(express.static(path.join(__dirname, "../frontend/dist")));
+
+app.get("*", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "../frontend/dist/index.html"));
+});
+
+
 
 
 
