@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import Footer from '../components/Footer'
 import { useNavigate, useLocation } from 'react-router-dom'
 import { getProduct, removeErrors } from '../features/products/productSlice.js'
-import NoProducts from '../components/noProducts.jsx'
+import NoProducts from '../components/NoProducts.jsx'
 import { toast } from 'react-toastify';
 import Product from '../components/Product.jsx'
 import Navbar from '../components/Navbar.jsx'
