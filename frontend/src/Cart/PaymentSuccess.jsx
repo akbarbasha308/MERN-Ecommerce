@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import '../CartStyles/paymentSuccess.css'
+import '../CartStyles/PaymentSuccess.css'
 import {Link,useSearchParams } from 'react-router-dom'
 import PageTitle from '../components/PageTitle'
 import Navbar from '../components/Navbar.jsx'
