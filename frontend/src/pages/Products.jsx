@@ -1,5 +1,5 @@
 import React, { useEffect,useState } from 'react'
-import '../pageStyles/products.css'
+import '../pageStyles/Products.css'
 import PageTitle from '../components/PageTitle.jsx'
 import { useDispatch, useSelector } from 'react-redux'
 import Footer from '../components/Footer'
