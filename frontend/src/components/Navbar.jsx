@@ -1,6 +1,6 @@
 import React from 'react'
 import '../componentStyles/Navbar.css'
-import '../pageStyles/search.css'
+import '../pageStyles/Search.css'
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import SearchIcon from '@mui/icons-material/Search'
