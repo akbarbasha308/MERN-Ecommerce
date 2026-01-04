@@ -1,5 +1,5 @@
 import React from "react";
-import'../CartStyles/payment.css'
+import'../CartStyles/Payment.css'
 import PageTitle from "../components/PageTitle";
 import Navbar from "../components/Navbar.jsx"; 
 import Footer from "../components/Footer";
