@@ -5,6 +5,8 @@ import ProductDetails from './pages/ProductDetails.jsx'
 import Products from './pages/Products.jsx'
 import Register from './user/Register.jsx'
 import Login from './user/Login.jsx'
+import AboutUs from './pages/AboutUs.jsx'
+import ContactUs from './pages/ContactUs.jsx'
 import { useDispatch, useSelector } from 'react-redux'
 import { useEffect } from 'react'
 import { loadUser } from './features/user/userSlice.js'
@@ -45,6 +47,8 @@ function App() {
     <Routes>
       <Route path='/' element={<Home />} />
       <Route path='/product/:id' element={<ProductDetails />} />
+      <Route path='/aboutus' element={<AboutUs />} />
+      <Route path='/contactus' element={<ContactUs />} />
       <Route path='/products' element={<Products />} />
       <Route path='/products/:keyword' element={<Products />} />
       <Route path='/register' element={<Register />} />

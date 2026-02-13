@@ -38,7 +38,7 @@ export const createProduct=handleAsyncError( async(req,res,next)=>{
 
 // get all product
 export const getAllProduct=handleAsyncError(async(req,res,next)=>{
-  const resultPerPage=4;
+  const resultPerPage=6
   const apiFeatures=new apifunctionality(Product.find(),req.query).search().filter()
   //geting filtered query
 const filteredQuery=apiFeatures.query

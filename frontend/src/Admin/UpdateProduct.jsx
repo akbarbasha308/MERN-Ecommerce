@@ -23,7 +23,7 @@ function UpdateProduct() {
         const [imagePreview,setImagePreview]=useState([])
         const {product}=useSelector(state=>state.product)
         const categories=['laptop','shoes','pants','glass','watch','cookies','pomegranate',
-            'socks','bag','mouse','headphone','bucket','bangle','ring','lcd','jacket','top']
+            'socks','bag','mouse','headphone','bucket','bangle','ring','tv','jacket','top']
 
         const navigate=useNavigate()
         const {productId}=useParams()

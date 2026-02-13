@@ -61,7 +61,7 @@ function Products() {
     <Navbar />
     <div className='products-layout'>
         <div className='filter-section'>
-          <h3 className='filter-heading'>categories</h3>
+          <h3 className='filter-heading'>CATEGORIES</h3>
               {/*renter filter categaries*/ }
               {categories.map((category)=>{
                 return (<li key={category} onClick={()=>handleCategory(category)}>{category}</li>)

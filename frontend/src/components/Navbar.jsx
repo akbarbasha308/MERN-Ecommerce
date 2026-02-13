@@ -53,8 +53,8 @@ const handleSearchClick=(e)=>
     <ul>
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/products'>Product</Link></li>
-        <li><Link to='/about-us'>About-us</Link></li>
-        <li><Link to='/contact-us'>Contact-us</Link></li>
+        <li><Link to='/aboutus'>About-us</Link></li>
+        <li><Link to='/contactus'>Contact-us</Link></li>
     </ul>
   </div>
   <div className="navbar-icons">

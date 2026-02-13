@@ -12,14 +12,22 @@ const keyword=this.querystr.keyword?{name:{$regex:this.querystr.keyword,
        this.query=this.query.find({...keyword})  
        return this                                   
     }
-    filter()
-    {
-        const querycopy={...this.querystr}
-       const removefields=["keyword","page","limit"];
-        removefields.forEach((key)=>delete querycopy[key])
-         this.query=this.query.find(querycopy)
-           return this   
+    filter() {
+  const querycopy = { ...this.querystr }
+  const removefields = ["keyword","page","limit"]
+  removefields.forEach((key)=>delete querycopy[key])
+
+  if(querycopy.category){
+    querycopy.category = {
+      $regex: `^${querycopy.category}$`,
+      $options: "i"
     }
+  }
+
+  this.query = this.query.find(querycopy)
+  return this
+}
+
     pagination(resultPerPage)
   {
     const currentPage=Number(this.querystr.page)||1

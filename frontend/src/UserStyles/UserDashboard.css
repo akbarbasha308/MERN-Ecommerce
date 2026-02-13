@@ -1,11 +1,5 @@
- .dashboard-container {
-  position: relative;
-  display: flex;
-  align-items: center;
-  margin-left: 20px;  /* Controls gap from cart icon */
-}
 
- .profile-header {
+.profile-header {
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -17,7 +11,7 @@
     transition: background-color 0.3s ease;
     margin-right: 40px;
     margin-bottom: 5px;
-}  
+}
 
 .profile-avatar {
     width: 50px;
@@ -43,7 +37,6 @@
     width: 150px;
     z-index: 1000;
 }
-
 
 .menu-option-btn {
     width: 100%;

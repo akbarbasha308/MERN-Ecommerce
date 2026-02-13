@@ -4,10 +4,12 @@ import { connectDB } from './config/db.js';
 import { v2 as cloudinary } from 'cloudinary';
 import Razorpay from 'razorpay';
 
-if(process.env.NODE_ENV!== 'production')
+if(process.env.NODE_ENV!=='production')
 {
 dotenv.config({path:'./config/config.env'})
 }
+
+
 const port = process.env.PORT ||5000 ;
 
 //handle uncaughtException
